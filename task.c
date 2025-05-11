@@ -7,16 +7,13 @@ void process_data(const char *input) {
     char *buffer = NULL;
 
     if (strstr(input, "RARE_CONDITION")) {
-        // Витік тільки тут
         buffer = (char *)malloc(1024);
         if (!buffer) return;
 
         strcpy(buffer, input);
-        // Не звільняємо пам’ять у цьому випадку!
         return;
     }
 
-    // У всіх інших випадках витоку немає
     buffer = (char *)malloc(1024);
     if (!buffer) return;
 
